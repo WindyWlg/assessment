@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">ANZ Homeloan Calculator UI Automation</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="f7f78bd68bd1042e3ada375a057ca0ad4cca7567f426df0bf9778cda9625b282.html">ANZ Customer Using Homeloan Borrowing Power Calculator To Get A Quick Estimate On How Much</a></span>
+                > <span class="truncate-60"><a
+                    href="8022ed3e849d932472d4f2f5ac472d47f591f34a874bb625d8d8f4d061d51641.html">Anna checking her borrowing power by using online ANZ homeloan calculator </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-12-2021 01:42</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">ANZ Customer Using Homeloan Borrowing Power Calculator To Get A Quick Estimate On How Much </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                you may be able to borrow based on your current income and existing financial commitments.<br />
+JIRA - HL-1, HL-2
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="99bf708cd55a86460d9066f65e4a397cb214b2a523b66b22f8118c3cf131dbed.html">Functional
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Anna checking her borrowing power by using online ANZ homeloan calculator
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Anna visits anz homeloan calculator webpage<br>When Anna entering details on the form with following data<br><table class='embedded'><thead><th>appType</th><th>dependents</th><th>propertyType</th><th>income</th><th>otherIncome</th><th>livingExpenses</th><th>loanRepayments</th><th>otherloanRepayments</th><th>otherCommitments</th><th>totalCClimit</th></thead><tbody><tr><td>&lt;appType&gt;</td><td>&lt;dependents&gt;</td><td>&lt;propertyType&gt;</td><td>&lt;income&gt;</td><td>&lt;otherIncome&gt;</td><td>&lt;livingExpenses&gt;</td><td>&lt;loanRepayments&gt;</td><td>&lt;otherloanRepayments&gt;</td><td>&lt;otherCommitments&gt;</td><td>&lt;totalCClimit&gt;</td></tr></tbody></table><br>Then Anna should see the response returning expected message as "&lt;expectedmessage&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" 1: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-1 : User entering valid data, expectedmessage=$482,000, appType=Single, dependents=0, propertyType=Home, income=80000, otherIncome=10000, livingExpenses=500, loanRepayments=0, otherloanRepayments=100, otherCommitments=0, totalCClimit=10000})" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 80000 | 10000 | 500 | 0 | 100 | 0 | 10000 |" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his yearly income" width="1920"/>
+                <img src="715b5bbfecc2888ca8e25f0dddb31e85d5d87cde7ede4ce41a1ffc6b8d75df4d.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="c3faab4f53e6d6a8a20004a9f02736e49d1c5d4bd597e8098914a3dbe0497542.png" title=" User entering other type of income" width="1920"/>
+                <img src="7eeeecc15796e9c75083fbb7bb0e01c7bbd4b744954681e2bbf332b7a8f955b5.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="2aebc48f58ff5bad6b222b4adf408a01df99591a7034d2ac296338f6f13dc5b0.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="f4d63a5a72c39ab6d6d51f0dd23d998252dc973883bd561a7e9c509e6487ba04.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="6055374cede6d0f1a37e065655c13c7ca3109c5ae542bac6dd00881171563fb7.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="5cc9da09003ba13b0bcd4ffd4baf2a5bf26e7ca46ee3126cf38f40aa20c8cc7e.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="74402543eee5b951c8674e30d785ae24b81e5bbd1bd9fdd9d7274f5bfdf70cfb.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="fd7d58c3436e6309ee68722805486a9c9c1cf01382fa4fa9c249ccf4c5ef7d38.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="40d0090482616c1782a4b7e4d7fcce478022c39c14f839d7ec393e925bd417c4.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="bdb70a7b2625b04b884463d4356c64039af9db6d2cc27d5afe9bf4e11d0b5e04.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="40d0090482616c1782a4b7e4d7fcce478022c39c14f839d7ec393e925bd417c4.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="ff46bdda6097b9d8cb65559fa50f161a50e05fd3d1693bec22ed622f359939bb.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="4cbf6f82f73752c451d6670d4d0c36736f8af722680497af7c3d9c8cb4f6d188.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="d1048fd98369d6ecb6c3df818ed07f13dd7f8db813ca8433891c58fd0c43654c.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 80000 | 10000 | 500 | 0 | 100 | 0 | 10000 | (completed)" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" Then Anna should see the response returning expected message as &quot;$482,000&quot;" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" Test validating the amount displayed is what is expected result" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" Test validating the amount displayed is what is expected result (completed)" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" Then Anna should see the response returning expected message as &quot;$482,000&quot; (completed)" width="1920"/>
+                <img src="d5fc11d7fdecc58f248728d8e7187764ace0f386de76acf112d4f0ed5db0cbcc.png" title=" 1: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-1 : User entering valid data, expectedmessage=$482,000, appType=Single, dependents=0, propertyType=Home, income=80000, otherIncome=10000, livingExpenses=500, loanRepayments=0, otherloanRepayments=100, otherCommitments=0, totalCClimit=10000}) (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" 2: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 0 |" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his yearly income" width="1920"/>
+                <img src="e693abdb783cae13ae5ff23a3117600b09c8bee4d7c567b5a24e85bddb8528f0.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering other type of income" width="1920"/>
+                <img src="c6a733b666df85b0814fc9cc464b2f53f7565c9dc6be3966a4d983c2cc010615.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="6d7a1fd0f279026eab2ac7cb2baa6c8d96c4a4b70790d4099c28c05a1df728e4.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="4473e59733bf787c2e9998e355500853a53ff428af5732171997ba399c6e9e99.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="b55ddbce860d5a2563b32224f47371a13e51f8a30c73e99f212aac0e3b2b608d.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="b55ddbce860d5a2563b32224f47371a13e51f8a30c73e99f212aac0e3b2b608d.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="e9d29919936c9cc3d61fd591c83c39cf4aeeedcad577bbb33358e3ea61a8f84c.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="e9d29919936c9cc3d61fd591c83c39cf4aeeedcad577bbb33358e3ea61a8f84c.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="d00d24d6c5e4f30f775b242a2df2e62ab39ab69e4b9028c982db8191b7f1dd6d.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="85893488f0f42fcb62ab7cb2f5ee18fc119d6c028be8094a28cdecf1a8400740.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="c6e7fd59ab4c21bf4f5547b6209af9e9bd4978d4f39777325677e95e0f800460.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="c6e7fd59ab4c21bf4f5547b6209af9e9bd4978d4f39777325677e95e0f800460.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="4829c1b2847bd043272b245d250300675e1f43a9fcc4f1a7cef430bb0585cca6.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 0 | (completed)" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="b1b99f485484eb34085617be96c96749f29ee861b5509638f48c13d6b118a807.png" title=" 2: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" 3: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 0 |" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his yearly income" width="1920"/>
+                <img src="358f7993f7d2d7da686816355d3462006fed62dfcbf20f964ac4f0b0f9e477fc.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering other type of income" width="1920"/>
+                <img src="5a8827b330b8fb684b31f27de4582b32e2b206d42bf9ef56c4e4cbaa9e713a69.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="41edf44da558a4196c5fcee3b54264a37d4e130b674aa99de52867f3f5d483b4.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="41edf44da558a4196c5fcee3b54264a37d4e130b674aa99de52867f3f5d483b4.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="27cb84c38e8e25186f95307eebed6384ce5cc54e860934c094af71361ed2023d.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="0bde073972ed1cf95ba28f793484bab33e604765d8880fe3945443307dfbe0c5.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="f8abb01fe789a52facf152cc8b933c71bf802de0ddad20aa71abb4406c0e5232.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="f8abb01fe789a52facf152cc8b933c71bf802de0ddad20aa71abb4406c0e5232.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="c4e69c97cfac00e37bbbd2c794ad799ed505a14838a10146b67bcb9b7ea0cc6f.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="0bde073972ed1cf95ba28f793484bab33e604765d8880fe3945443307dfbe0c5.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="895386961944e8ebcd63127a072fbdaf38ab5cd1342411b67368592593ca8626.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="ad30edc8ff2e10d82e28e137e751a4f7fe52bc31a964d12834f9e82636835bef.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="a58bd5cb5882ea0111711f47f5474cc19ee32115c165122a3f7447ea6c47fe91.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 0 | (completed)" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="db9d9a6065792c733068793e8421a4ad8498351b753f879bab5030a0a4e28ffe.png" title=" 3: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" 4: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=1, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 1 | 0 | 1 | 0 | 0 | 0 | 0 |" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his yearly income" width="1920"/>
+                <img src="fdf8733304c3bff3d43e542a796456d8591f0f8e5bde7231d4ebf669447ed06c.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="fdf8733304c3bff3d43e542a796456d8591f0f8e5bde7231d4ebf669447ed06c.png" title=" User entering other type of income" width="1920"/>
+                <img src="f0c6ad0b0a2bcfa49fc8d822418ad2f16bbc329045fb3351cb31b29c81f9339f.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="9e95ae7cb4ac926c1e8598eb4d8acfc30c186d85d0f0f1b0966a7348d7cad767.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="789675f37c8838a778ccef1dcac87378f0b87d5dd4eff8729df32b252c660fad.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="10453dc1c3b63b861afd743fe583a66b4eb5208e551869d7599c3157092d2d00.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="4cd009d90c522d11ac9d692f565faf9781c5e1af8287fa53b0970975fe5071a0.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="17c744e7b5fe77f7198b909eb52fe88d2f24f56d387f322d277ec952833f9fec.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="72dcd4392843c8b4be951e0c741e5569f35f08415bd6f12dc0781450b490dee3.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="72dcd4392843c8b4be951e0c741e5569f35f08415bd6f12dc0781450b490dee3.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="20e00d89bec26cbfbf8938cc45e7816e0e95d21451859cbfd24b56baec32733e.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="17c744e7b5fe77f7198b909eb52fe88d2f24f56d387f322d277ec952833f9fec.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="af2d9a72066b56607d3035884faa0b82b167353ded79ec7780cd6527cd23f35b.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="0d1c68b1c9b410107fa6c67fab675deeb00a1e6e3eb2bf6a824c4d5f177714f2.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="e2536511641c7c509db73a51d38793bdf01950aa18f61ecd007cb9abee6a92b4.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 1 | 0 | 1 | 0 | 0 | 0 | 0 | (completed)" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="a1ec3abb989a4518e63d0e385b900136105d8939b92ea2cbdca857518b6684e0.png" title=" 4: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=1, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" 5: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=1, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 1 | 1 | 0 | 0 | 0 | 0 |" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his yearly income" width="1920"/>
+                <img src="e693abdb783cae13ae5ff23a3117600b09c8bee4d7c567b5a24e85bddb8528f0.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering other type of income" width="1920"/>
+                <img src="465d3ffa3d7d01570a0ec08a7fcce7ad98daf13d84eb4acc2ba65cae384df93f.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="23ccfd6ca96764b9acd552dfd9270d7992ba49abd2c93181422a43831a612beb.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="14f6e4fc71afa9d61d2832337faf9a33635084e117fcde42cabc7dfcddd4e287.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="94dfc4df487d668a98032049b10eee80ecf2fe1724b2301543e0151931e7727d.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="f65159e2acedf3328037c90ddabc990fbf90f5f8df334fb61b5e1af4ae79abfa.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="f9cfe4a6fdc28ab4a4d3fc98270ffad79165971adf6fb275fdcfb7ec7aace1dd.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="0d595bba899d9ad7a770018cc1de9af3e22ae94bfb80607aac8f5f4252996aa5.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="817956e2764b7fbfb7584ee35388147b97ed540778cc034c8e351827b04a9db6.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="4db1fba2507084a90a01e4757c1571e684bfb0374c80e2cff8bfb44b85efd282.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="f9cfe4a6fdc28ab4a4d3fc98270ffad79165971adf6fb275fdcfb7ec7aace1dd.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="bea3d9959eb24a662ea7c71ef8ca67653815b579063e0b80abc682c40de7dde0.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="f9cfe4a6fdc28ab4a4d3fc98270ffad79165971adf6fb275fdcfb7ec7aace1dd.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="a0d30b2fb1191b89c5c5d68a758101ea68a159ef28edcabd70d4ff7cbb04b51b.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 1 | 1 | 0 | 0 | 0 | 0 | (completed)" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="9a3df3641773c14cc7bdd50e0dae7a83badd1c2f5f6dc866e18228ce1f9dd412.png" title=" 5: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=1, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" 6: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=1, otherloanRepayments=0, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 1 | 0 | 0 | 0 |" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his yearly income" width="1920"/>
+                <img src="358f7993f7d2d7da686816355d3462006fed62dfcbf20f964ac4f0b0f9e477fc.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering other type of income" width="1920"/>
+                <img src="5a8827b330b8fb684b31f27de4582b32e2b206d42bf9ef56c4e4cbaa9e713a69.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="90532da608b8e62650fce480096d0b87a5906c9d27bbdc019b05e648bb0af674.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="d14eb06ab040d0db2d4af41f32f5f987cba0f907407a0cca03381a40da0eac9f.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="85fe09f6b9774b96bf9b08d0df3407f8db1e56d306ee36db57843320dd4b6f74.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="01e35292d20d9e273ca2c03158ddf238f628c6a20aeeb064834fdde39a321678.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="8cf874a822279ac4c33b75a72becdb7399a3067e39809c99852fe4083e449bb0.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="372e49fd9a2eebdaa393b6e7aa3a6232373e764174498f236ead09eca1105ef5.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="3a44d1b24743ea641f2c1833a0aaaed02ed207f09447e6e4eb731d1db42f1146.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="01e35292d20d9e273ca2c03158ddf238f628c6a20aeeb064834fdde39a321678.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="10a8b9cf8b1c28cb39fde6528896e59bb801018af32d8c205b922f18efa0506e.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="10a8b9cf8b1c28cb39fde6528896e59bb801018af32d8c205b922f18efa0506e.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="fd3e803e09c51e2ec3f9f4c2e9e204ad7dc3e9157c6e8cd6ce1209e46a47587c.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 1 | 0 | 0 | 0 | (completed)" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="c17d0c6b399be2f372caed1a212132840b78b67a1a6611bde9d7d52b969c6db6.png" title=" 6: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=1, otherloanRepayments=0, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" 7: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=1, otherCommitments=0, totalCClimit=0})" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 1 | 0 | 0 |" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his yearly income" width="1920"/>
+                <img src="e693abdb783cae13ae5ff23a3117600b09c8bee4d7c567b5a24e85bddb8528f0.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering other type of income" width="1920"/>
+                <img src="c6a733b666df85b0814fc9cc464b2f53f7565c9dc6be3966a4d983c2cc010615.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="6d7a1fd0f279026eab2ac7cb2baa6c8d96c4a4b70790d4099c28c05a1df728e4.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="4473e59733bf787c2e9998e355500853a53ff428af5732171997ba399c6e9e99.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="b55ddbce860d5a2563b32224f47371a13e51f8a30c73e99f212aac0e3b2b608d.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="85893488f0f42fcb62ab7cb2f5ee18fc119d6c028be8094a28cdecf1a8400740.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="1a6deae4743adc5dcdf2a41d518fdc2fa7cc3aba5d7eecef75457ccbf7620e35.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="c12bdd3246f588edda5d338f62ad1a0bab06620edce4688b9493f6225c775d7d.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="bf35db271a7f06fe5017f275da43430b6c3d0ef0a6303764ac39491dd81a5eeb.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="0d625bc13b4c2cf9cfac50a9c51fdf3f3e8f7fa0aaa563225b1ebe307c50d44e.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="34cfa3d6b476d79d2590de443905206781b25258c9195c285af4c27fa25d7bf0.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="c12bdd3246f588edda5d338f62ad1a0bab06620edce4688b9493f6225c775d7d.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="19a198f3f9e083ff4ec1c1be303d3003dcd89c8191e7f30e9d3bbdff4bff5351.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 1 | 0 | 0 | (completed)" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="c49449d4b1ad62770624ae353da89cda1fcdc03e1095c45e50d3d56db266e251.png" title=" 7: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=1, otherCommitments=0, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" 8: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=1, totalCClimit=0})" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 1 | 0 |" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering his yearly income" width="1920"/>
+                <img src="358f7993f7d2d7da686816355d3462006fed62dfcbf20f964ac4f0b0f9e477fc.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="0e3da8e48a5a2cb1c89ce10fb3694528baabb86eeee8c5d61f65481d13185e12.png" title=" User entering other type of income" width="1920"/>
+                <img src="5a8827b330b8fb684b31f27de4582b32e2b206d42bf9ef56c4e4cbaa9e713a69.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="5a8827b330b8fb684b31f27de4582b32e2b206d42bf9ef56c4e4cbaa9e713a69.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="90532da608b8e62650fce480096d0b87a5906c9d27bbdc019b05e648bb0af674.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="d14eb06ab040d0db2d4af41f32f5f987cba0f907407a0cca03381a40da0eac9f.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="27cb84c38e8e25186f95307eebed6384ce5cc54e860934c094af71361ed2023d.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="0bde073972ed1cf95ba28f793484bab33e604765d8880fe3945443307dfbe0c5.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="f8abb01fe789a52facf152cc8b933c71bf802de0ddad20aa71abb4406c0e5232.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="ad30edc8ff2e10d82e28e137e751a4f7fe52bc31a964d12834f9e82636835bef.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="4e62c1865dd66e1e78461d682bb7e3321cf9cb15e0429b4722dd8733e48c5dc6.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="326847bd04d3d9a54dcbecea295dbca2812c5b3518ff2458e3beef9f80ded405.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="25f95855f155fb1cabac438a7a57e2d8cb104777cb271d174c35d990b58514fa.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="dcc2154613b5cd2cdae4ca4f6a82ab374d36ea3a782216903dfd5269aae29a8e.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="911b309671465b43c96ca1077e04594161dfa6aa1d4cbc19721e29b8c2447ae8.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 1 | 0 | (completed)" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="f70c83ee1c761a54549597812429193a259839bc22bd39fe6bdbf3d684537caa.png" title=" 8: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=1, totalCClimit=0}) (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" 9: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=1})" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User navigating to ANZ home loan calculator webpage" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" Given Anna visits anz homeloan calculator webpage (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 1 |" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting applicant type whether Single/Joint (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting number of dependents in household (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type " width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User selecting to buy Home to live in or Investment property type  (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his yearly income" width="1920"/>
+                <img src="e693abdb783cae13ae5ff23a3117600b09c8bee4d7c567b5a24e85bddb8528f0.png" title=" User entering his yearly income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering other type of income" width="1920"/>
+                <img src="c6a733b666df85b0814fc9cc464b2f53f7565c9dc6be3966a4d983c2cc010615.png" title=" User entering other type of income (completed)" width="1920"/>
+                <img src="9fb9c28a87e8cd940ebeda73559094c2ffb63499125948d37c759f2d71c9e0b0.png" title=" User entering his/her living expenses" width="1920"/>
+                <img src="ccbb51c28ae6fc5b3fdd1ea74bb42543ed5eb1700ab71103ef420495eb9059be.png" title=" User entering his/her living expenses (completed)" width="1920"/>
+                <img src="29b1bbe94d70b596b2dab830e58d29072b0f9f1302597aa6ee5b9bd998abcb8b.png" title=" User entering current home loan repayments" width="1920"/>
+                <img src="b55ddbce860d5a2563b32224f47371a13e51f8a30c73e99f212aac0e3b2b608d.png" title=" User entering current home loan repayments (completed)" width="1920"/>
+                <img src="85893488f0f42fcb62ab7cb2f5ee18fc119d6c028be8094a28cdecf1a8400740.png" title=" User entering any other outstanding loan amounts" width="1920"/>
+                <img src="e9d29919936c9cc3d61fd591c83c39cf4aeeedcad577bbb33358e3ea61a8f84c.png" title=" User entering any other outstanding loan amounts (completed)" width="1920"/>
+                <img src="1cab33c5aa52b2a2fb12e025fb59f507e5a4c2fe5768403e89b8c42a28abe0cd.png" title=" User entering any misc commitments" width="1920"/>
+                <img src="d00d24d6c5e4f30f775b242a2df2e62ab39ab69e4b9028c982db8191b7f1dd6d.png" title=" User entering any misc commitments (completed)" width="1920"/>
+                <img src="85893488f0f42fcb62ab7cb2f5ee18fc119d6c028be8094a28cdecf1a8400740.png" title=" User entering his/her credit card limits" width="1920"/>
+                <img src="b45af6115ec48e582dc1fb8b88c00325383419e0eebabdbae7ff34bca5d66628.png" title=" User entering his/her credit card limits (completed)" width="1920"/>
+                <img src="f135ebcf002ebd71dbd4453e06f21ea925bde48ecd724f61c79eea956fe7bf04.png" title=" User clicking on the Calculate Loan amount button" width="1920"/>
+                <img src="c447e83a52d5da20871f67df0be1ad174b64b6720b8724a36a1e42f790d17a75.png" title=" User clicking on the Calculate Loan amount button (completed)" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" When Anna entering details on the form with following data
+| appType | dependents | propertyType | income | otherIncome | livingExpenses | loanRepayments | otherloanRepayments | otherCommitments | totalCClimit |
+| Single | 0 | Home | 0 | 0 | 1 | 0 | 0 | 0 | 1 | (completed)" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" Then Anna should see the response returning expected message as &quot;error&quot;" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" Test validating whether web app throws proper error msg" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" Test validating whether web app throws proper error msg (completed)" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" Then Anna should see the response returning expected message as &quot;error&quot; (completed)" width="1920"/>
+                <img src="ad92459b2f1e5f0352cfeb996b1afed851ff54cac64eb130a3ccc5f7df742a7c.png" title=" 9: Anna checking her borrowing power by using online ANZ homeloan calculator ({testCase=Testcase HL-2 : User entering Invalid data, expectedmessage=error, appType=Single, dependents=0, propertyType=Home, income=0, otherIncome=0, livingExpenses=1, loanRepayments=0, otherloanRepayments=0, otherCommitments=0, totalCClimit=1}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.51</span>
+</div>
+</body>
+</html>
